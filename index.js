@@ -1,18 +1,4 @@
-    
-      String.prototype.replaceAll = function (val,rep) {
-        
-        var string = this;
-      
-        var count =  string.split(val);
-    
-        for (let i = 0; i <count.length; i++) {
-            string=string.replace(val,rep);
-        }
-       
-        return string;
-    }
-    
-    /**
+ /**
      * 
      * @param {*} itemKey   
      * @returns 
@@ -76,26 +62,26 @@
         format=yearStartIndex>=0?format.replace("yyyy",yyyy.toString()):format;
     
         
-        const hourH=format.indexOf("h")
+         
         const hourHH=format.indexOf("hh")
-        const hourStartIndex=hourHH>=0?hourHH:hourH>=0?hourH:-1;
-        const hourRepl=hourHH>=0?"hh":hourH>=0?"h":"";
+        const hourStartIndex=hourHH>=0?hourHH:-1;
+        const hourRepl=hourHH>=0?"hh":"";
         const hourStr=hourHH>=0&&thh<10?"0"+thh:thh.toString();
         format=hourStartIndex>=0?format.replace(hourRepl,hourStr):format;
         
        
     
-        const minuteM=format.indexOf("M")
+       
         const minuteMM=format.indexOf("MM")
-        const minuteStartIndex=minuteMM>=0?minuteMM:minuteM>=0?minuteM:-1;
-        const minuteRepl=minuteMM>=0?"MM":minuteM>=0?"M":"";
+        const minuteStartIndex=minuteMM>=0?minuteMM:-1;
+        const minuteRepl=minuteMM>=0?"MM":"";
         const minuteStr=minuteMM>=0&&tmm<10?"0"+tmm:tmm.toString();
         format=minuteStartIndex>=0?format.replace(minuteRepl,minuteStr):format;
     
-        const secondS=format.indexOf("s")
+       
         const secondSS=format.indexOf("ss")
-        const secondStartIndex=secondSS>=0?secondSS:secondS>=0?secondS:-1;
-        const secondRepl=secondSS>=0?"ss":secondS>=0?"s":"";
+        const secondStartIndex=secondSS>=0?secondSS:-1;
+        const secondRepl=secondSS>=0?"ss":"";
         const secondStr=secondSS>=0&&tss<10?"0"+tss:tss.toString();
         format=secondStartIndex>=0?format.replace(secondRepl,secondStr):format;
       return format;
@@ -107,5 +93,3 @@
           string =string.substring(0,1).toUpperCase()+string.substring(1,string.length);
           return string;
       }
-
-};
