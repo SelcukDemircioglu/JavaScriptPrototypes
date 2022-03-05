@@ -1,5 +1,7 @@
 # JavaScriptPrototypes
 
+```jsx
+  
 date= new Date();
 Sat Mar 05 2022 20:39:11 GMT+0300 (GMT+03:00)
 date.dateFormat("yyyy-mm-dd");
@@ -26,3 +28,4 @@ date.dateFormat("mm hh:ss");
 '03 20:11'
 date.dateFormat("mm-dd hh:ss");
 '03-05 20:11'
+```
